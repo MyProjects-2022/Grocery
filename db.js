@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
 		dialect: 'mysql' /* 'mysql' | 'mariadb' | 'postgres' | 'mssql' */,
 	}
 );
-
+//ab
 (async () => {
 	try {
 		await sequelize.authenticate();
