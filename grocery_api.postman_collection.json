@@ -1,0 +1,786 @@
+{
+	"info": {
+		"_postman_id": "6cb3f956-2386-4b35-93ca-3f5fadd5b649",
+		"name": "grocery_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21768744"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Allproduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/getproduct?page=2&size=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"getproduct"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbycategory_product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "zomato",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/home/mac/Downloads/hotel-lobby-15817257.jpg"
+								},
+								{
+									"key": "product_amount",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "product_discount_price",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "xyz",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "fresh",
+									"type": "text"
+								},
+								{
+									"key": "is_weight_variable",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/home/mac/Downloads/tomato_noun_001_17860.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/add_product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"add_product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "product_name",
+									"value": "zomato123",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/home/mac/Downloads/hotel-room-27254386.jpg"
+								},
+								{
+									"key": "product_amount",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "product_discount_price",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "xyz",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "fresh",
+									"type": "text"
+								},
+								{
+									"key": "is_weight_variable",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/update_product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"update_product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/delete_product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"delete_product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_image_Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": [
+										"/home/mac/Pictures/Screenshot from 2022-07-21 17-21-42.png",
+										"/home/mac/Pictures/Screenshot from 2022-07-22 17-54-33.png",
+										"/home/mac/Pictures/Screenshot from 2022-07-30 13-00-59.png"
+									]
+								},
+								{
+									"key": "product_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/product_image_Upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"product_image_Upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_product_image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/home/mac/Downloads/hotel-rooms-8146308.jpg"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/update_product_image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"update_product_image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_getimages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/product/getimages?page=2&size=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"getimages"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete_product_Images",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product/delete_product_image",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"delete_product_image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allcategories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getbyidcategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/product/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createcategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category_name\": \"Fruits\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatecategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"2\",\r\n  \"category_name\": \"Fruits\",\r\n  \"status\": 0\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletecategory",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filetoupload",
+							"type": "file",
+							"src": "2411040.jpg"
+						},
+						{
+							"key": "id",
+							"value": "9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/categories/update_picture",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories",
+						"update_picture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"3\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/categories/send_email",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories",
+						"send_email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifyemail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/signup/verify/d8f7e98b395974af9cb206baa5a6a210",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"signup",
+						"verify",
+						"d8f7e98b395974af9cb206baa5a6a210"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getloggeduser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/update_profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"update_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change_password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/change_password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot_password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/forgot_password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"forgot_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotverify",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/forgot_password/verify/d5d5199258fed2cc151d2bb3e18f589a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"forgot_password",
+						"verify",
+						"d5d5199258fed2cc151d2bb3e18f589a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset_password ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/reset_password ",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"reset_password "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/contact/allgets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/contact/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"contact",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/product/getproduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/product/getproduct",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"getproduct"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

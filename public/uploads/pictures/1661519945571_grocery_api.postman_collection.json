@@ -1,0 +1,1043 @@
+{
+	"info": {
+		"_postman_id": "6cb3f956-2386-4b35-93ca-3f5fadd5b649",
+		"name": "grocery_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21768744"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "Allproduct",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/getproduct?page=0&size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"getproduct"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get product by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/getproduct/9",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"getproduct",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get product by Category id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/get_productby_categoryid?page=0&size=12&category_id=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"get_productby_categoryid"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "12"
+										},
+										{
+											"key": "category_id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get product details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/getproduct_details_with_mult_img/12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"getproduct_details_with_mult_img",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_name",
+											"value": "as",
+											"type": "text"
+										},
+										{
+											"key": "product_amount",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "product_discount_price",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "xyz",
+											"type": "text"
+										},
+										{
+											"key": "tag",
+											"value": "fresh",
+											"type": "text"
+										},
+										{
+											"key": "is_weight_variable",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "product_discount_percent",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "abc",
+											"type": "text"
+										},
+										{
+											"key": "benefits",
+											"value": "dfas",
+											"type": "text"
+										},
+										{
+											"key": "other_product_info",
+											"value": "dsfa",
+											"type": "text"
+										},
+										{
+											"key": "storage_and_usage",
+											"value": "dsaf",
+											"type": "text"
+										},
+										{
+											"key": "product_type",
+											"value": "featured",
+											"type": "text"
+										},
+										{
+											"key": "product_slug",
+											"value": "petrole",
+											"type": "text"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/home/mac/Downloads/fresh-mango-500x500.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product/add_product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"add_product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "product_name",
+											"value": "zomato123",
+											"type": "text"
+										},
+										{
+											"key": "product_amount",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "product_discount_price",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "xyz",
+											"type": "text"
+										},
+										{
+											"key": "tag",
+											"value": "fresh",
+											"type": "text"
+										},
+										{
+											"key": "is_weight_variable",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "product_type",
+											"value": "featured",
+											"type": "text"
+										},
+										{
+											"key": "product_slug",
+											"value": "petrole",
+											"type": "text"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/home/mac/Downloads/hotel-room-27254386.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product/update_product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"update_product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/delete_product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"delete_product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_image_Upload",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "product_id",
+											"value": "26",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "12",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product/product_image_Upload",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"product_image_Upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_product_image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/home/mac/Downloads/hotel-rooms-8146308.jpg"
+										},
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product/update_product_image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"update_product_image"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_getimages",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/getimages",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"getimages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_product_Images",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":11\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/delete_product_image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"delete_product_image"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "Get All Categories",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get category by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/categories/15",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"15"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_picture",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "filetoupload",
+											"type": "file",
+											"src": "2411040.jpg"
+										},
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/categories/update_picture",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"update_picture"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createcategory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"category_name\": \"Fruits\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatecategory",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"2\",\r\n  \"category_name\": \"Fruits\",\r\n  \"status\": 0\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletecategory",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "send_email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"3\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/categories/send_email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"send_email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verifyemail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/signup/verify/d8f7e98b395974af9cb206baa5a6a210",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"signup",
+										"verify",
+										"d8f7e98b395974af9cb206baa5a6a210"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getloggeduser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/signup",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change_password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/change_password",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"change_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/update_profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"update_profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot_password",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/forgot_password",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"forgot_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgotverify",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/forgot_password/verify/d5d5199258fed2cc151d2bb3e18f589a",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"forgot_password",
+										"verify",
+										"d5d5199258fed2cc151d2bb3e18f589a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset_password ",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/reset_password ",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"reset_password "
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/contact/allgets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/contact/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"contact",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/product/getproduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/product/getproduct",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"getproduct"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Web",
+			"item": [
+				{
+					"name": "get Features Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/get_featured_product/featured",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"get_featured_product",
+								"featured"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Popular Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/get_popular_product/popular",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"get_popular_product",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get similar Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/get_similar_product/oil",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"get_similar_product",
+								"oil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product Filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/get_product_filter",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"get_product_filter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
